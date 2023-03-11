@@ -209,7 +209,7 @@ Practice accessing data above by console.log-ing following items:
 
 //(1) Name of the first artist (0th index) in the array
 
-
+'test'
 
 //(2) Bio of the third artist (2nd index) in the array 
 
