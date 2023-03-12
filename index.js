@@ -252,11 +252,19 @@ Use listOfNames to do the following:
 */
 
 
-function listOfNames(array) {
-  
+
+function listOfNames(artists) {
+  let copyOfArtists = artists.slice()
+  for (let i = 0; i < copyOfArtists.length; i++){
+    tempname = copyOfArtists[i].name;
+    copyOfArtists[i] = tempname;  
+}
+return copyOfArtists;
 }
 
-console.log(copy);
+console.log(listOfNames(artists));
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -303,9 +311,10 @@ Use lotsOfArt to do the following:
 🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]
 */
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt() {
+  
 }
+
 
 
 
