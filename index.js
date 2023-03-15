@@ -253,16 +253,20 @@ Use listOfNames to do the following:
 
 
 
-function listOfNames(artists) {
-  let copyOfArtists = artists.slice()
+function listOfNames(array) {
+  let copyOfArtists = array.slice()
   for (let i = 0; i < copyOfArtists.length; i++){
-    tempname = copyOfArtists[i].name;
-    copyOfArtists[i] = tempname;  
+ //   tempname = copyOfArtists[i].name;
+  //  copyOfArtists[i] = tempname;  
+
+  copyOfArtists[i] = array[i].name;
 }
 return copyOfArtists;
 }
 
 console.log(listOfNames(artists));
+
+
 
 
 
@@ -275,10 +279,15 @@ Use removeArtist to do the following:
 5. Return the resulting copied array
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+
+function removeArtist(array,number) {
+  const copyOfArtists = array.splice();
+  copyOfArtists.splice(number,1);
+  return copyOfArtists;
 }
 
+
+console.log(removeArtist(artists,1));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -297,10 +306,11 @@ Use addArtist to do the following:
 5. Add the newly created object to the copied array, then return the copied array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
-}
 
+
+function addArtist() {
+  
+}
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -311,11 +321,14 @@ Use lotsOfArt to do the following:
 🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]
 */
 
-function lotsOfArt() {
-  
+function lotsOfArt(array) {
+  if (array.paintings >= 100){
+    console.log(array);
+  }
+  return array;
 }
 
-
+console.log(lotsOfArt(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -344,10 +357,10 @@ Use artistByCountry to do the following:
 🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(/*Your Code Here*/){
-  /*Your Code Here*/
+function artistByCountry(){
+  
+  
 }
-
 
 
 /* ***** END OF TASKS ***** */
