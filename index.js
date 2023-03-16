@@ -255,9 +255,7 @@ Use listOfNames to do the following:
 
 function listOfNames(array) {
   let copyOfArtists = array.slice()
-  for (let i = 0; i < copyOfArtists.length; i++){
- //   tempname = copyOfArtists[i].name;
-  //  copyOfArtists[i] = tempname;  
+  for (let i = 0; i < copyOfArtists.length; i++){  
 
   copyOfArtists[i] = array[i].name;
 }
@@ -287,7 +285,7 @@ function removeArtist(array,number) {
 }
 
 
-console.log(removeArtist(artists,1));
+console.log(removeArtist(artists,0));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -308,9 +306,20 @@ Use addArtist to do the following:
 
 
 
-function addArtist() {
-  
+function addArtist(artists,name,years,genre,nationality,bio) {
+  let newArtistArray = artists.slice();
+  let newArtist = {
+    name: `${name}`,
+    years: `${years}`,
+    genre: `${genre}`,
+    nationality: `${nationality}`,
+    bio: `${bio}`
+  }
+  newArtistArray.push(newArtist);
+  return newArtistArray; 
 }
+
+console.log(addArtist(artists, 'Matt', '1998-2023','Web Design', 'Scottish', 'My Bio Here'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -343,11 +352,15 @@ Use artistInfo to do the following:
   "Frida Kahlo de Rivera (Spanish pronunciation: [ˈfɾiða ˈkalo]; born Magdalena Carmen Frida Kahlo y Calderón; 6 July 1907 – 13 July 1954) was a Mexican artist who painted many portraits, self-portraits and works inspired by the nature and artifacts of Mexico. Inspired by the country's popular culture, she employed a naïve folk art style to explore questions of identity, postcolonialism, gender, class and race in Mexican society. Her paintings often had strong autobiographical elements and mixed realism with fantasy. In addition to belonging to the post-revolutionary Mexicayotl movement, which sought to define a Mexican identity, Kahlo has been described as a surrealist or magical realist.Born to a German father and a mestiza mother, Kahlo spent most of her childhood and adult life at her family home in Coyoacán, La Casa Azul, now known and publicly accessible as the Frida Kahlo Museum. She was disabled by polio as a child. Until a traffic accident at age eighteen caused lifelong pain and medical problems, she had been a promising student headed for medical school. During her recovery, she returned to her childhood hobby of art with the idea of becoming an artist."
 */
 
-function artistInfo(array, name){
-  
+function artistInfo(array, string){
+  for (let i = 0; i < array.length; i++){
+    if (array[i].name === string){
+      console.log(array[i].bio);
+    }
+  }
 }
 
-
+console.log(artistInfo(artists, 'Frida Kahlo'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 9: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistByCountry to do the following: 
